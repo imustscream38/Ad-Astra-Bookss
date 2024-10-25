@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>AD Astra Books</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="categories-toggle">Categories &#9662;</a>
+                        <ul class="dropdown-menu" id="categories-menu">
+                            <li><a href="philosophy.html">philosophy</a></li>
+                            <li><a href="sci-fi.html">sci-fi</a></li>
+                            <li><a href="fantasy.html">Fantasy</a></li>
+                            <li><a href="non-fiction.html">non-fiction</a></li>
+                            <li><a href="horror.html">Horror</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                        document.getElementById('categories-toggle').addEventListener('click', function(event) {
+                            event.preventDefault(); 
+                            var dropdownMenu = document.getElementById('categories-menu');
+                            
+                          
+                            if (dropdownMenu.style.display === 'block') {
+                                dropdownMenu.style.display = 'none';
+                            } else {
+                                dropdownMenu.style.display = 'block';
+                            }
+                        });
+                    
+                        
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#categories-toggle')) {
+                                var dropdownMenu = document.getElementById('categories-menu');
+                                if (dropdownMenu.style.display === 'block') {
+                                    dropdownMenu.style.display = 'none';
+                                }
+                            }
+                        };
+                    </script>
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="storelocation.html">Store Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ 
+    <section class="auth-section">
+        <div class="auth-forms"> 
+            <div class="form-container" id="register">
+                <h2>Register</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="register-name">Full Name:</label>
+                        <input type="text" id="register-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <button type="submit" class="auth-button">Register</button>
+                    <p>Already have an account? <a href="login.html">Login here</a>.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AD Astra Books. All Rights Reserved.</p>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo - AD Astra Books</title>
+    <link rel="stylesheet" href="promoOWO.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>AD Astra Books</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="categories-toggle">Categories &#9662;</a>
+                        <ul class="dropdown-menu" id="categories-menu">
+                            <li><a href="philosophy.html">philosophy</a></li>
+                            <li><a href="sci-fi.html">sci-fi</a></li>
+                            <li><a href="fantasy.html">fantasy</a></li>
+                            <li><a href="non-fiction.html">non-fiction</a></li>
+                            <li><a href="horror.html">Horror</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                        document.getElementById('categories-toggle').addEventListener('click', function(event) {
+                            event.preventDefault(); 
+                            var dropdownMenu = document.getElementById('categories-menu');
+                            
+                          
+                            if (dropdownMenu.style.display === 'block') {
+                                dropdownMenu.style.display = 'none';
+                            } else {
+                                dropdownMenu.style.display = 'block';
+                            }
+                        });
+                    
+                        
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#categories-toggle')) {
+                                var dropdownMenu = document.getElementById('categories-menu');
+                                if (dropdownMenu.style.display === 'block') {
+                                    dropdownMenu.style.display = 'none';
+                                }
+                            }
+                        };
+                    </script>
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="storelocation.html">Store Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="promo-intro">
+        <div class="container">
+            <h2>Exclusive Promotions Just for You!</h2>
+            <p>Explore our limited-time offers and grab the best deals on your favorite books. Whether you are looking for bestsellers or the latest arrivals, we have something for everyone!</p>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <h2>Our Latest Promotions</h2>
+
+            <div class="promo-wrapper">
+
+                <div class="promo-item">
+                    <h3>50% Off on Bestsellers</h3>
+                    <p>Save big on our top-selling books.</p>
+                    <a href="online-bookstoreprototype.html"><button class="promo-button">Shop Now</button></a>
+                </div>
+
+                <div class="promo-item">
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>On select titles, get one free when you buy one.</p>
+                    <a href="online-bookstoreprototype.html"><button class="promo-button">Browse Titles</button></a>
+                </div>
+
+                <div class="promo-item">
+                    <h3>New Arrivals - Launch Prices</h3>
+                    <p>Check out our newest releases at special prices.</p>
+                    <a href="new-arrival.html"><button class="promo-button">See New Arrivals</button></a>
+                </div>
+
+                <div class="promo-item">
+                    <h3>20% Off Pre-Orders</h3>
+                    <p>Get an early bird discount on upcoming releases.</p>
+                    <a href="preorder.html"><button class="promo-button">Pre-Order Now</button></a>
+                </div>
+
+                <div class="promo-item">
+                    <h3>Membership Discounts</h3>
+                    <p>Enjoy exclusive discounts with our membership plan.</p>
+                    <a href="membership.html"><button class="promo-button"> Join Now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container">
+            <h2>What Our Customers Are Saying</h2>
+            <div class="testimonial-wrapper">
+      
+                <div class="testimonial-item">
+                    <p>"i love books! especially books that was filled with knowledge about plant care!"</p>
+                    <h4>- Basil</h4>
+                </div>
+
+                <div class="testimonial-item">
+                    <p>"i love cooking and cook books :p"</p>
+                    <h4>- Hero</h4>
+                </div>
+
+                <div class="testimonial-item">
+                    <p>"i like to read, my brother sunny love comic books, so i bought him some."</p>
+                    <h4>- Mari</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AD Astra Books. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

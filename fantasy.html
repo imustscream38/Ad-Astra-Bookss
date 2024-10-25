@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Astra Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>AD Astra Books</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="categories-toggle">Categories &#9662;</a>
+                        <ul class="dropdown-menu" id="categories-menu">
+                            <li><a href="philosophy.html">philosophy</a></li>
+                            <li><a href="sci-fi.html">sci-fi</a></li>
+                            <li><a href="fantasy.html">fantasy</a></li>
+                            <li><a href="non-fiction.html">non-fiction</a></li>
+                            <li><a href="horror.html">Horror</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                        document.getElementById('categories-toggle').addEventListener('click', function(event) {
+                            event.preventDefault(); 
+                            var dropdownMenu = document.getElementById('categories-menu');
+                            
+                          
+                            if (dropdownMenu.style.display === 'block') {
+                                dropdownMenu.style.display = 'none';
+                            } else {
+                                dropdownMenu.style.display = 'block';
+                            }
+                        });
+                    
+                        
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#categories-toggle')) {
+                                var dropdownMenu = document.getElementById('categories-menu');
+                                if (dropdownMenu.style.display === 'block') {
+                                    dropdownMenu.style.display = 'none';
+                                }
+                            }
+                        };
+                    </script>
+
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="cart-menu">
+               <a href="checkout.html"><img src="shopping_cart-removebg-preview.png" alt="Cart" class="cart-icon"></a> 
+            </div>
+            <div class="hamburger-menu">
+                <img src="Hamburger_icon-removebg-preview.png" alt="Menu">
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-bar">
+            <input type="text" placeholder="What are we reading today?">
+            <button type="submit"><img src="glass-removebg-preview.png" alt="Search"></button>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>Fantasy</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="A Game Of Thrones" data-price="$12.99">
+                    <img src="fantasy.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="Jurassic Park" width="250px" height="250px" style="margin-right:0 25px;" data-price="16.99">
+                    <img src="fantasy2.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="Harry Potter And The Socerers Stone" data-price="$13.99">
+                    <img src="fantasy3.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="The Eye Of Argon" data-price="$9.99">
+                    <img src="fantasy4.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy 2024 - All Rigth Reserved Ad Astra Books</p>
+    </footer>
+</body>
+</html>

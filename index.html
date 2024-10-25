@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Astra Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>AD Astra Books</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="categories-toggle">Categories &#9662;</a>
+                        <ul class="dropdown-menu" id="categories-menu">
+                            <li><a href="philosophy.html">philosophy</a></li>
+                            <li><a href="sci-fi.html">sci-fi</a></li>
+                            <li><a href="fantasy.html">fantasy</a></li>
+                            <li><a href="non-fiction.html">non-fiction</a></li>
+                            <li><a href="horror.html">Horror</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                        document.getElementById('categories-toggle').addEventListener('click', function(event) {
+                            event.preventDefault(); 
+                            var dropdownMenu = document.getElementById('categories-menu');
+                            
+                          
+                            if (dropdownMenu.style.display === 'block') {
+                                dropdownMenu.style.display = 'none';
+                            } else {
+                                dropdownMenu.style.display = 'block';
+                            }
+                        });
+                    
+                        
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#categories-toggle')) {
+                                var dropdownMenu = document.getElementById('categories-menu');
+                                if (dropdownMenu.style.display === 'block') {
+                                    dropdownMenu.style.display = 'none';
+                                }
+                            }
+                        };
+                    </script>
+
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="cart-menu">
+               <a href="checkout.html"><img src="shopping_cart-removebg-preview.png" alt="Cart" class="cart-icon"></a> 
+            </div>
+            <div class="hamburger-menu">
+                <img src="Hamburger_icon-removebg-preview.png" alt="Menu">
+            </div>
+        </div>
+    </header>
+
+    <div class="audio-container">
+        <button onclick="document.getElementById('background-audio').play()">Click to play a song</button>
+        <audio id="background-audio" loop>
+            <source src="OMORI - Final Duet.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <section class="search-section">
+        <div class="search-bar">
+            <input type="text" placeholder="What are we reading today?">
+            <button type="submit"><img src="glass-removebg-preview.png" alt="Search"></button>
+        </div>
+        <div class="button-group">
+            <a href="membership.html"><button>Membership</button></a>
+            <a href="preorder.html"><button>Pre-Order</button></a>
+            <a href="new-arrival.html"><button>New Books</button></a>
+            <a href="storelocation.html"><button>Location</button></a>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>Cartoons</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="Marcy's Journal" data-price="$19.99">
+                    <img src="marcy_journal-removebg-preview.png" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="Star vs. The Forces of Evil" width="250px" height="250px" style="margin-right:0 25px;" data-price="$21.99">
+                    <img src="svtfoe.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="Journal 3" data-price="$25.99">
+                    <img src="journal 3.webp" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="Book of Bill" data-price="$15.99">
+                    <img src="book of bill.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>philosophy</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="Crime And Punishment" data-price="$19.99">
+                    <img src="dotoevsky1.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="The Brothers Karamazov" width="250px" height="250px" style="margin-right:0 25px;" data-price="$21.99">
+                    <img src="dotoevsky2.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="Metamorphosis" data-price="$25.99">
+                    <img src="franz-kafka1.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="The Castle" data-price="$15.99">
+                    <img src="franz-kafka2.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>Sci-Fi</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="I, Robot" data-price="$19.99">
+                    <img src="irobot.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="I Have No Mouth And I Must Scream" width="250px" height="250px" style="margin-right:0 25px;" data-price="$21.99">
+                    <img src="ihavenomouth.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="dune" data-price="$25.99">
+                    <img src="dune.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="Frankenstein" data-price="$15.99">
+                    <img src="frank.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>Fantasy</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="A Game Of Thrones" data-price="$12.99">
+                    <img src="fantasy.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="Jurassic Park" width="250px" height="250px" style="margin-right:0 25px;" data-price="16.99">
+                    <img src="fantasy2.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="Harry Potter And The Socerers Stone" data-price="$13.99">
+                    <img src="fantasy3.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="The Eye Of Argon" data-price="$9.99">
+                    <img src="fantasy4.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="book-section">
+        <div class="categories">
+            <h1>Non-Fiction</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="The Godfather" data-price="$19.99">
+                    <img src="godfather.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="the history of the decline and fall of the roman empire" width="250px" height="250px" style="margin-right:0 25px;" data-price="$21.99">
+                    <img src="nonfic1.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="The Gulag Archipelago" data-price="$25.99">
+                    <img src="nonfic2.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="The Trial" data-price="$15.99">
+                    <img src="thetrial.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="categories">
+            <h1>Horror</h1>
+            <div class="book-container">
+                <div class="book-item" data-title="scary stories to tell in the dark" data-price="$19.99">
+                    <img src="spooki.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Marcy's Journal">
+                </div>
+                <div class="book-item" data-title="The Shining" width="250px" height="250px" style="margin-right:0 25px;" data-price="$21.99">
+                    <img src="theshining.jpeg" alt="Star vs. The Forces of Evil">
+                </div>
+                <div class="book-item" data-title="The Amityville Horror" data-price="$25.99">
+                    <img src="horror1.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Journal 3">
+                </div>
+                <div class="book-item" data-title="The Haunting Of Hill House" data-price="$15.99">
+                    <img src="horror2.jpeg" width="250px" height="250px" style="margin-right:0 25px;" alt="Book of Bill">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy 2024 - All Rights Reserved Ad Astra Books</p>
+    </footer>
+
+</body>
+</html>
